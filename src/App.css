@@ -12,11 +12,11 @@
   margin-top: 100px;
   color: #ffffff;
   font-size: 80px;
-  letter-spacing: 7px!important;
+  letter-spacing: 7px !important;
   overflow: hidden;
   border-right: 2px solid hsl(0, 0%, 0%);
   white-space: nowrap;
-  animation: typewriter 2s steps(44) 1s 1 normal both,
+  animation: typewriter 1.1s steps(11) 1s 1 normal both,
     blinkTextCursor 1s steps(2) infinite;
 }
 
@@ -82,11 +82,12 @@
 }
 
 .task .left-section{
-  font-size: 20px;
-  display: flex;
-  align-items: center;
-  overflow: hidden;
   gap: 20px;
+  display: flex;
+  cursor: pointer;
+  font-size: 20px;
+  overflow: hidden;
+  align-items: center;
 }
 
 .task .left-section .task-title{
