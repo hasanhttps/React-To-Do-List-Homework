@@ -66,13 +66,13 @@
 }
 
 .tasks .tasksLabel{
-  font-size: 20px;
+  font-size: 30px;
 }
 
 .task{
   display: flex;
   align-items: center;
-  width: 500px;
+  width: 800px;
   justify-content: space-between;
   background-color: #263033;
   border-radius: 40px;
@@ -106,10 +106,15 @@
 .task .right-section #button{
   cursor: pointer;
   background-color: #909094;
+  transition: all 150ms ease-in-out;
   border-radius: 50%;
   border: none;
   height: 35px;
   width: 35px;
+}
+
+.task .right-section #button:hover{
+  box-shadow: 0 0 12px 0 #3498db inset, 0 0 10px 4px #3498db;
 }
 
 @keyframes typewriter {
