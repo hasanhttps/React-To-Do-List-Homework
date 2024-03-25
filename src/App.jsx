@@ -50,7 +50,7 @@ function App() {
 
   useEffect(() => {
     if (!started){
-      setTasks(JSON.parse(localStorage.getItem('tasks')));
+      if (JSON.parse(localStorage.getItem('tasks')) != null) setTasks(JSON.parse(localStorage.getItem('tasks')));
       setStarted(true);
     }
     else 
@@ -73,8 +73,8 @@ function App() {
       </div>
 
       <div className='tasks'>
-        { tasks.length == 0 ? '' : <p className='tasksLabel'>Tasks</p>}
-        { tasks.map((task, i) => (
+        { tasks?.length == 0 || tasks == null ? '' : <p className='tasksLabel'>Tasks</p>}
+        { tasks?.map((task, i) => (
           <div className='task' key={i}>
             <div className='left-section' onClick={() => { 
               let element = document.getElementById("task-desc" +  i.toString());
