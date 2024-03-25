@@ -77,12 +77,12 @@ function App() {
         { tasks.map((task, i) => (
           <div className='task' key={i}>
             <div className='left-section' onClick={() => { 
-              let element = document.getElementById('task-desc');
+              let element = document.getElementById("task-desc" +  i.toString());
               if (element.style.textDecoration != 'line-through' ) element.style.textDecoration= 'line-through';
               else element.style.textDecoration = 'none';
             } }>
               <p className='task-title'>{task.title}</p>
-              <p className='task-desc' id='task-desc'>{task.description}</p>
+              <p className='task-desc' id={"task-desc"+  i.toString()}>{task.description}</p>
             </div>
 
             <div className='right-section'>
